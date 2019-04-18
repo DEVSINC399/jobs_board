@@ -1,0 +1,6 @@
+.container
+    %h2 Jobs Board
+    - @jobs.each do |job|
+        .panel-body.table-bordered
+            %h3= link_to job.title, job
+            %p= job.company

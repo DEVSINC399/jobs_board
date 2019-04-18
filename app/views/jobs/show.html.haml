@@ -1,0 +1,8 @@
+.container
+    %h1= @job.title
+    %p= @job.description
+    %p= @job.url
+    .btn-group
+        = link_to 'Edit', edit_job_path(@job), class: "btn btn-success"
+        = link_to 'Delete', root_path, method: :delete, data: { confirm: "Are you sure to delete?" }, class: "btn btn-danger"
+        = link_to 'Back', root_path, class: "btn btn-primary"
